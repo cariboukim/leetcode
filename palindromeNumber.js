@@ -1,4 +1,7 @@
 var isPalindrome = function(x) {
+
+  // optimized
+
   //   if (x < 0) return false;
 
   //   let n = x;

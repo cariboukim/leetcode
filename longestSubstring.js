@@ -25,6 +25,8 @@
 //   return longest;
 // };
 
+// optimized
+
 var lengthOfLongestSubstring = (s) => {
 
   if (!s) return 0;
