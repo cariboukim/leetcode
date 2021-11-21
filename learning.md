@@ -19,3 +19,7 @@ let sortedArray = [...map].sort((a, b) => {});
 ### I can use spread operator on Map()? How does this work?
 
 * This works because Map() returns an object filled with key, value pairs. Using a spread operator ``` ... ``` clones the object, allowing for different use cases to be possible with the object.
+
+------
+
+## LongestSubstring
