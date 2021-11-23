@@ -4,7 +4,11 @@
 
 * Using Map as a sorting tool
 
-* Explanation of a what Map() does: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map>
+* Explanation of a what [Map()](<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map>) does.
+
+* Explanation of what [Array.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) does.
+
+* Array.prototype.sort() is very effective because it sorts the array in place, and returns the original array, sorted however you would like.
 
 1. After iterating through the array, and inputting all the values into the new Map, use a spread operator on the map object and sort by ascending/descending or as needed.
 
@@ -23,3 +27,9 @@ let sortedArray = [...map].sort((a, b) => {});
 ------
 
 ## LongestSubstring
+
+* Using substring() to effectively splice from string, eliminating the need for an array
+
+* Explanation on [substring()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
+
+* Using String.substring() helps out a lot especially in this case where you need to find a specific part of the string that you need to cut out.
