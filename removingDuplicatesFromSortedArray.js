@@ -30,5 +30,19 @@ var removeDuplicates = function(nums) {
   return nums.length;
 };
 
+// leetcode fastest submission
+
+var removeDuplicates = (nums) => {
+  let count = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (i < nums.length - 1 && nums[i] === nums[i + 1]) continue;
+    nums[count] = nums[i];
+    count++;
+  }
+
+  return count;
+}
+
 // console.log(removeDuplicates(test1));
 console.log(removeDuplicates(test2));
