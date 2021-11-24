@@ -27,6 +27,8 @@ let parensSingle = '(';
 
 // first attempt doesn't check for complete parentheses pairs but just not ordered. need to check for pairs and ordered now!
 
+// second attempt uses recursion but is unoptimzed
+
 var isValid = (s) => {
   if (s.length === 1) return false;
 
@@ -57,7 +59,37 @@ var isValid = (s) => {
   }
 }
 
+// optimized solution, but some reason on leetcode, it runs really slowly... stack iterating through an array not optimized?
+
+// var isValid = (s) => {
+//   var stack = [];
+//   var map = {
+//     '[': ']',
+//     '{': '}',
+//     '(': ')'
+//   };
+
+//   for (let i = 0; i < s.length; i++) {
+//     var char = s[i];
+//     if (char in map) {
+//       stack.push(char);
+//       console.log(stack);
+//     } else {
+//       if (stack.length === 0) {
+//         return false;
+//       }
+
+//       var last = stack.pop();
+//       if (map[last] !== char) {
+//         return false;
+//       }
+//     }
+//   }
+
+//   return stack.length === 0;
+// }
+
 
 // console.log(isValid(parensSingle));
-console.log(isValid(parensFalse));
-// console.log(isValid(parens));
+// console.log(isValid(parensFalse));
+console.log(isValid(parens));
