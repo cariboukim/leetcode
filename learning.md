@@ -33,3 +33,18 @@ let sortedArray = [...map].sort((a, b) => {});
 * Explanation on [substring()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
 
 * Using String.substring() helps out a lot especially in this case where you need to find a specific part of the string that you need to cut out.
+
+------
+
+## Math.max() & Math.min()
+
+* [Math.max()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max) and [Math.min()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min) were very useful in optimizing bestTimeToSellAndBuyStock.
+
+* Math.max() just returns the largest of integers put into the input parameters like so, and Math.min() returns the smallest of integers
+
+```Math.max(1, 3, 5), output = 5```
+```Math.min(1, 3, 5), output = 1```
+
+* In this use case, it was used to find the absolute max value, through subtracting the current price minus the smallest value possible, iterating through the array
+
+* This allows for find the greatest difference without having to use multiple for loops or recursion, effectively reducing the possible time complexity
