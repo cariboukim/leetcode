@@ -12,18 +12,36 @@
 
 // Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
+// unoptimized, but modifying the input array
+
 let test1 = [0,1,2,2,3,0,4,2];
 
-var removeElement = function(nums, val) {
+// var removeElement = function(nums, val) {
+
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] !== val) continue;
+
+//     nums.splice(i, 1);
+//     i--;
+//   }
+
+//   return nums.length;
+// };
+
+// leetcode fastest solution
+
+var removeElement = (nums, val) => {
+  let k = 0;
 
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] !== val) continue;
-
-    nums.splice(i, 1);
-    i--;
+    if (nums[i] !== val) {
+      nums[k] = nums[i];
+      k++;
+    }
+    console.log(nums);
   }
 
-  return nums.length;
-};
+  return k;
+}
 
 console.log(removeElement(test1, 2));
