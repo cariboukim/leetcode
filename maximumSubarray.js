@@ -7,32 +7,46 @@ let test2 = [5,4,-1,7,8];
 let test3 = [-2, -1];
 let test4 = [-1, 0, -2];
 
-// O(2n) time complexity, first submission
+// O(2n) time complexity, first submission, time limit exceeded with larger arrays
 
-var maxSubArray = function(nums) {
+// var maxSubArray = function(nums) {
 
+//   let max = nums[0];
+//   let current = 0;
+
+//   if (nums.length === 1) return max;
+
+//   for (let i = 0; i < nums.length; i++) {
+//     current = nums[i];
+//     if (current > max) {
+//       max = current;
+//     }
+//     for (let j = i + 1; j < nums.length; j++) {
+//       current += nums[j];
+//       if (current > max) {
+//         max = current;
+//       } else {
+//         continue;
+//       }
+//     }
+//   }
+
+//   return max;
+// };
+
+// discussion solution, using Math.max to find greatest sum
+
+var maxSubArray = (nums) => {
   let max = nums[0];
-  let current = 0;
+  let sum = nums[0];
 
-  if (nums.length === 1) return max;
-
-  for (let i = 0; i < nums.length; i++) {
-    current = nums[i];
-    if (current > max) {
-      max = current;
-    }
-    for (let j = i + 1; j < nums.length; j++) {
-      current += nums[j];
-      if (current > max) {
-        max = current;
-      } else {
-        continue;
-      }
-    }
+  for (let i = 1; i < nums.length; i++) {
+    sum = Math.max(nums[i], sum + nums[i]);
+    max = Math.max(max, sum);
   }
 
   return max;
-};
+}
 
 console.log(maxSubArray(test1));
 console.log(maxSubArray(test2));
