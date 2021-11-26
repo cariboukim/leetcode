@@ -48,3 +48,15 @@ let sortedArray = [...map].sort((a, b) => {});
 * In this use case, it was used to find the absolute max value, through subtracting the current price minus the smallest value possible, iterating through the array
 
 * This allows for find the greatest difference without having to use multiple for loops or recursion, effectively reducing the possible time complexity
+
+------
+
+## for ... of
+
+* Explanation of [for ... of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+
+* This syntax creates a loop iterating over iterable objects, so it can extend beyond arrays.
+
+* So how does this differ from a normal for loop?  Syntax-wise, it is different but it also no longer terminates the loop based on previously stated arguemnts such as ``` for (let i = 0; i < array.length; i++) ```, the for ... of loop just iterates over all iterable elements and stops when there are no more things to iterate over, kind of like a while loop.
+
+* When to know to use a regular for loop vs. a for ... of loop? Not quite sure myself, there are of course varying cases but I'll try experimenting with all of them and see which ones work the best! The knowledge
