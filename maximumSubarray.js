@@ -36,13 +36,34 @@ let test4 = [-1, 0, -2];
 
 // discussion solution, using Math.max to find greatest sum
 
+// var maxSubArray = (nums) => {
+//   let max = nums[0];
+//   let sum = nums[0];
+
+//   for (let i = 1; i < nums.length; i++) {
+//     sum = Math.max(nums[i], sum + nums[i]);
+//     max = Math.max(max, sum);
+//   }
+
+//   return max;
+// }
+
+// leetcode fastest solution, fastest by a mile
+
 var maxSubArray = (nums) => {
   let max = nums[0];
-  let sum = nums[0];
+  let sum = 0;
 
-  for (let i = 1; i < nums.length; i++) {
-    sum = Math.max(nums[i], sum + nums[i]);
-    max = Math.max(max, sum);
+  for (let i of nums) {
+    sum += i;
+
+    if (sum > max) {
+      max = sum;
+    }
+
+    if (sum < 0) {
+      sum = 0;
+    }
   }
 
   return max;
