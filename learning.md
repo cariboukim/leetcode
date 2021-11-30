@@ -59,4 +59,4 @@ let sortedArray = [...map].sort((a, b) => {});
 
 * So how does this differ from a normal for loop?  Syntax-wise, it is different but it also no longer terminates the loop based on previously stated arguemnts such as ``` for (let i = 0; i < array.length; i++) ```, the for ... of loop just iterates over all iterable elements and stops when there are no more things to iterate over, kind of like a while loop.
 
-* When to know to use a regular for loop vs. a for ... of loop? Not quite sure myself, there are of course varying cases but I'll try experimenting with all of them and see which ones work the best! The knowledge
+* When to know to use a regular for loop vs. a for ... of loop? Not quite sure myself, there are of course varying cases but I'll try experimenting with all of them and see which ones work the best! The knowledge of this for ... of loop does open a lot more opportunities and different ways to approach a problem.
