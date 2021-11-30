@@ -32,5 +32,26 @@ var lengthOfLastWord = function(s) {
   return word.length;
 };
 
+// fastest solution on leetcode
+
+var lengthOfLastWord = (s) => {
+  let count = 0;
+  let hasStarted = false;
+
+  for (let i = s.length -1; i >= 0; i--) {
+    if (s[i] !== ' ') {
+      hasStarted = true;
+    }
+    if (hasStarted && s[i] !== ' ') {
+      count++;
+    }
+    if (count !== 0 && s[i] === ' ') {
+      return count;
+    }
+  }
+
+  return count;
+}
+
 console.log(lengthOfLastWord(test1));
 console.log(lengthOfLastWord(test2));
