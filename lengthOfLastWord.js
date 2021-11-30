@@ -10,9 +10,26 @@ let test2 = '   fly me   to   the moon  ';
 
 // initial solution
 
+// var lengthOfLastWord = function(s) {
+//   let sArray = s.split(' ');
+//   return sArray.pop().length;
+// };
+
+// implemented recursion
+
 var lengthOfLastWord = function(s) {
   let sArray = s.split(' ');
-  return sArray.pop().length;
+  let word = '';
+  let last = (sArray) => {
+    word = sArray.pop();
+    if (word !== '') {
+      return;
+    }
+    last(sArray);
+  }
+
+  last(sArray);
+  return word.length;
 };
 
 console.log(lengthOfLastWord(test1));
