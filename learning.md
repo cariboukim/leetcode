@@ -68,3 +68,15 @@ let sortedArray = [...map].sort((a, b) => {});
 * When working through this problem there was an interesting bug where using Number() on this particular string, [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3], would result in the last three digits turning into 0's
 
 * I still do not know why this happens and have not found an explanation to why this happens but hopefully I can come back to this problem and figure out why this happens.
+
+------
+
+## Binary - using BigInt
+
+* When going through this problem initially, I was really confused on what a binary string was. A quick google search and a quickly found out that a binary search was basically 1's and 0's that you would just add too a string, or that's kind of what I figured it out to be as. Binary string explained [here](https://www.ibm.com/docs/en/i/7.3?topic=types-binary-strings#:~:text=A%20binary%20string%20is%20a,has%20a%20CCSID%20of%2065535.).
+
+* However, when actually trying to come up with a solution to this problem, I came into a problem where I had to add strings, which would not work, or in different cases where I would have to add strings where they had different integer positions.
+
+* After struggling a bit, I came upon this discussion post on leetcode, where [nova2993](https://leetcode.com/problems/add-binary/discuss/1017596/Detail-Explanation-EASY-Single-Line-97-faster) talks about using BigInt and solving the problem in 1 line, which is super mind blowing to me.
+
+* "0b" put in front a string that you're trying to convert lets BigInt() know that what you're tryign to pass in is a binary number.
