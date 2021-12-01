@@ -80,3 +80,7 @@ let sortedArray = [...map].sort((a, b) => {});
 * After struggling a bit, I came upon this discussion post on leetcode, where [nova2993](https://leetcode.com/problems/add-binary/discuss/1017596/Detail-Explanation-EASY-Single-Line-97-faster) talks about using BigInt and solving the problem in 1 line, which is super mind blowing to me.
 
 * "0b" put in front a string that you're trying to convert lets BigInt() know that what you're tryign to pass in is a binary number.
+
+* After converting the binary strings into binary numbers, you use toString to convert the BigInt number back into a binary string. You do this by passing the base that you want to convert the argument to.
+
+``` str.toString(2) converts the str string to Binary (base 2) ```
