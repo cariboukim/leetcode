@@ -93,4 +93,6 @@ let sortedArray = [...map].sort((a, b) => {});
 
 * A basic definition of memoization, an optimization technique that speeds up applications by storing the results of expensive function calls and returning the cached result when the same inputs are supplied again.
 
-* So how do we use memoization in this case?
+* So how do we use memoization in this case? So actually, looking further into this problem, or actually in the discussions for this particular one, it seems like the answers for each of the numbers seems to come from the fibonacci sequence, where the next amount of steps is equal to the sum of the previous 2.
+
+* So, memoization is not needed in this case or in terms of a more simple solution, we can just use the algorithm to find fibonacci sums.
