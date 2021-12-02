@@ -11,20 +11,41 @@ function ListNode(val, next) {
 
 let test1 = [1, 1, 2, 3, 3];
 
-var deleteDuplicates = function(head) {
-  console.log(head);
-  let list = new ListNode(head.val);
-  console.log(list);
-  console.log(head.val);
+// initial solution
 
-  while (head !== null) {
-    if (head.val !== head.next) {
-      list.next = new ListNode(head.val);
-      head = head.next;
+// var deleteDuplicates = function(head) {
+//   console.log(head);
+//   let list = new ListNode(head.val);
+//   console.log(list);
+//   console.log(head.val);
+
+//   while (head !== null) {
+//     if (head.val !== head.next) {
+//       list.next = new ListNode(head.val);
+//       head = head.next;
+//     } else {
+//       list = list.next
+//     }
+//   }
+
+//   return list;
+// };
+
+// discussion leetcode solution
+
+var deleteDuplicates = (head) => {
+  let currentNode = head;
+  let prevNode = null;
+
+  while(currentNode) {
+    if (prevNode && prevNode.val === currentNode.val) {
+      prevNode.next = currentNode.next;
+      currentNode = currentNode.next;
     } else {
-      list = list.next
+      prevNode = currentNode;
+      currentNode = currentNode.next;
     }
   }
 
-  return list;
-};
+  return head;
+}
