@@ -96,3 +96,7 @@ let sortedArray = [...map].sort((a, b) => {});
 * So how do we use memoization in this case? So actually, looking further into this problem, or actually in the discussions for this particular one, it seems like the answers for each of the numbers seems to come from the fibonacci sequence, where the next amount of steps is equal to the sum of the previous 2.
 
 * So, memoization is not needed in this case or in terms of a more simple solution, we can just use the algorithm to find fibonacci sums.
+
+* Coming back to the topic of memoization, you can easily store previous values that you've made prior in an object, or in this case, an array.
+
+* So in this case, you would find solutions and if not present in the memo array, you would just push it into it and make it an existing solution.

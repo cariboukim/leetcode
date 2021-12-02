@@ -43,5 +43,6 @@ function climb(steps, stepsLeft, memo) {
 
   return memo[stepsLeft];
 }
+
 console.log(climbStairs(test1));
 console.log(climbStairs(test2));
