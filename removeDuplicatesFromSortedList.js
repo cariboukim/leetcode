@@ -49,3 +49,19 @@ var deleteDuplicates = (head) => {
 
   return head;
 }
+
+// fastest leetcode solution
+
+// var deleteDuplicates = (head) => {
+//   if (head === null) return head;
+//   let list = head;
+//   while (list) {
+//     if (list.next !== null && list.val === list.next.val) {
+//       list.next = list.next.next;
+//     } else {
+//       list = list.next;
+//     }
+//   }
+
+//   return head;
+// };
