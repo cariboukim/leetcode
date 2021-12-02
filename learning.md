@@ -84,3 +84,13 @@ let sortedArray = [...map].sort((a, b) => {});
 * After converting the binary strings into binary numbers, you use toString to convert the BigInt number back into a binary string. You do this by passing the base that you want to convert the argument to.
 
 ``` str.toString(2) converts the str string to Binary (base 2) ```
+
+------
+
+## Climbing Stairs - memoization
+
+* Memoization explained [here](https://www.digitalocean.com/community/tutorials/understanding-memoization-in-javascript).
+
+* A basic definition of memoization, an optimization technique that speeds up applications by storing the results of expensive function calls and returning the cached result when the same inputs are supplied again.
+
+* So how do we use memoization in this case?
